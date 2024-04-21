@@ -27,12 +27,12 @@ export default function SheetDemo() {
       </SheetTrigger>
       <SheetContent>
         <SheetHeader className="flex flex-col gap-5">
-          <SheetTitle className="flex items-center justify-center mt-10"><img className="w-40" src="aisiyahlogo.png" alt="" /></SheetTitle>
+          <SheetTitle className="flex items-center justify-center mt-10 max-md:mt-0"><img className="w-40" src="aisiyahlogo.png" alt="" /></SheetTitle>
           <SheetDescription>
             Make changes to your profile here. Click save when you're done.
           </SheetDescription>
         </SheetHeader>
-        <div className="flex mt-11 flex-col gap-4 py-4">
+        <div className="flex mt-11 max-md:mt-4 flex-col gap-4 py-4">
 
           <Link className="flex items-center gap-3 text-lg font-semibold" href="asdasd"><RiHome4Line size={30} />Home</Link>
           <Link className="flex items-center gap-3 text-lg font-semibold" href="asdasd"><FiFileText size={30} />About Us</Link>
