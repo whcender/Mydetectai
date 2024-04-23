@@ -76,7 +76,8 @@ const config = {
     },
     fontFamily:{
       darker:["Darker Grotesque", "sans-serif"],
-      work:[ "Work Sans", "sans-serif"]
+      work:[ "Work Sans", "sans-serif"],
+      roboto :[ "Roboto", "sans-serif"]
     }
   },
   plugins: [require("tailwindcss-animate")],
