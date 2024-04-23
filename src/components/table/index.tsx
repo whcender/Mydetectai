@@ -1,5 +1,4 @@
 import React from 'react'
-import { RiEmotionHappyLine } from "react-icons/ri";
 import Avatar from "@/components/avatar/index"
 
 const index = () => {
