@@ -35,7 +35,7 @@ export default function PopoverDemo() {
 
                     </div>
                     <div className="flex  flex-col gap-2">
-                        <Link className="flex items-center gap-3 max-md:gap-2  text-lg max-md:text-base font-semibold" href="/login"><FaUserCheck size={20} />Giriş Yap</Link>
+                        <Link className="flex items-center gap-3 max-md:gap-2  text-lg max-md:text-base font-semibold" href="/auth/login"><FaUserCheck size={20} />Giriş Yap</Link>
                     </div>
                     <div className="flex  flex-col gap-2">
                         <div className="w-full h-[0.4px] m-auto bg-gray-700 opacity-70"></div>
