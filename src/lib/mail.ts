@@ -1,10 +1,22 @@
 import { Resend } from "resend";
-import VerificationMail  from "@/components/email/verificationMail"
+import VerificationMail from "@/components/email/verificationMail"
+import { domain } from "@/utils/check"
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendVerificationEmail = async (email: string, token: string) => {
-    const coniformLink = `http://localhost:3000/auth/new-verification?token=${token}`;
+    const coniformLink = `${domain}/auth/new-verification?token=${token}`;
+
+    await resend.emails.send({
+        from: "info@arlanqrmenu.com",
+        to: email,
+        subject: "Selam! E Posta Adresini Onayla",
+        react: VerificationMail({ confirmLink: coniformLink }) as React.ReactElement,
+    })
+}
+
+export const sendChangeVerificationEmail = async (email: string, token: string) => {
+    const coniformLink = `${domain}/auth/new-email?token=${token}`;
 
     await resend.emails.send({
         from: "info@arlanqrmenu.com",
@@ -15,7 +27,7 @@ export const sendVerificationEmail = async (email: string, token: string) => {
 }
 
 export const sendResetEmail = async (email: string, token: string) => {
-    const resetLink = `http://localhost:3000/auth/new-password?token=${token}`;
+    const resetLink = `${domain}/auth/new-password?token=${token}`;
 
     await resend.emails.send({
         from: "info@arlanqrmenu.com",
