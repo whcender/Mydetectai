@@ -79,7 +79,8 @@ const config = {
       work:[ "Work Sans", "sans-serif"],
       roboto :[ "Roboto", "sans-serif"],
       karantina :[ "Karantina", "sans-serif"],
-      nato :[ "Noto Sans Thai", "sans-serif"]
+      nato :[ "Noto Sans Thai", "sans-serif"],
+      libre :[ "Libre Caslon Display", "sans-serif"]
     }
   },
   plugins: [require("tailwindcss-animate")],
