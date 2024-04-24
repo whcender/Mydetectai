@@ -22,7 +22,7 @@ const VideoUpload = () => {
     formData.append('video', selectedFile);
 
     try {
-      const response = await fetch('https://aitest-qo53752v5a-nw.a.run.app', {
+      const response = await fetch('https://aitest-qo53752v5a-nw.a.run.app/', {
         method: 'POST',
         body: formData
       });
