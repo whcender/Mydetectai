@@ -15,6 +15,17 @@ export const sendVerificationEmail = async (email: string, token: string) => {
     })
 }
 
+export const sendChangeVerificationEmail = async (email: string, token: string) => {
+    const coniformLink = `${domain}/auth/new-email?token=${token}`;
+
+    await resend.emails.send({
+        from: "info@arlanqrmenu.com",
+        to: email,
+        subject: "Selam! E Posta Adresini Onayla",
+        react: VerificationMail({ confirmLink: coniformLink }) as React.ReactElement,
+    })
+}
+
 export const sendResetEmail = async (email: string, token: string) => {
     const resetLink = `${domain}/auth/new-password?token=${token}`;
 

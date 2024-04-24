@@ -5,7 +5,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { useSearchParams } from 'next/navigation';
 
 import { BeatLoader } from 'react-spinners';
-import { newVerification } from '@/actions/new-verification';
+import { newVerification } from '@/actions/new-emailveri';
 import { FormError } from '@/components/auth/formError';
 import { FormSuccess } from '@/components/auth/formSucces';
 import { useRouter } from 'next/navigation';
@@ -31,7 +31,7 @@ const page = () => {
                 setError(data?.error);
                 setSuccess(data?.success);
                 setTimeout(() => {
-                    router.push(`/auth/login?key=yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5?email=${data?.email}`);
+                    router.push(`/`);
                 }, 100);
             }).catch(() => {
                 setError("Bir hata oluştu");
