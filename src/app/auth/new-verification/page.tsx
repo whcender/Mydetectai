@@ -32,7 +32,7 @@ const page = () => {
                 setSuccess(data?.success);
                 setTimeout(() => {
                     router.push(`/auth/login?key=yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5?email=${data?.email}`);
-                }, 3400);
+                }, 2000);
             }).catch(() => {
                 setError("Bir hata oluştu");
             })
