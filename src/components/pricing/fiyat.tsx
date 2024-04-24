@@ -6,7 +6,7 @@ const fiyat = () => {
   return (
     <div className='text-black' >
       <div className=' w-max flex flex-col items-center gap-6 justify-center text-center px-5 py-14 rounded-2xl bg-white '>
-        <p className='font-darker text-3xl font-bold'>Personal</p>
+        <p className='font-darker mt-0 text-3xl font-bold'>Personal</p>
         <p className='font-nato font-bold'>€  <b>12,99</b>/user</p>
         <div className='w-60 h-[0.1px] bg-black opacity-45'></div>
         <div className='flex flex-col gap-4 text-left'>
