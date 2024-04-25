@@ -9,9 +9,9 @@ const index = () => {
                 <div >
                     <img className='max-md:size-40 max-xl:size-72 max-lg:size-44' src="man.svg" alt="" />
                 </div>
-                <div className='flex flex-col text-center max-lg:gap-3 gap-8'>
+                <div className='flex flex-col items-center  text-center max-lg:gap-3 gap-8'>
                     <p className='font-karantina font-black text-7xl max-md:text-4xl'>Choose MydetectAi!</p>
-                    <p className='text-xl max-md:text-base max-lg:text-lg'>Subscribe to our newsletter and get upto 40% off on our exclusive products. </p>
+                    <p className='text-xl text-center max-md:text-base max-lg:text-lg max-md:w-[90%]'>Subscribe to our newsletter and get upto 40% off on our exclusive products. </p>
                     <div className='flex justify-center items-center '>
                         <Input />
                         <Button className='bg-[#0299e9] rounded-none'>Subscrıbe</Button>
