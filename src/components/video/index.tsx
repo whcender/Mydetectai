@@ -52,7 +52,7 @@ const VideoUpload = () => {
     <div className='text-white w-[80%] m-auto'>
       <h2 className='mt-6'>Video Upload</h2>
       <form onSubmit={handleSubmit}>
-        <input type="file" onChange={handleFileChange} />
+        <input accept="video/*" type="file" onChange={handleFileChange} />
         <Button variant={'destructive'} type="submit" disabled={!selectedFile || loading}> {/* Buton yalnızca dosya seçilmişse ve yükleme işlemi yoksa aktif olacak */}
           {loading ? 'Uploading...' : 'Upload'}
         </Button>

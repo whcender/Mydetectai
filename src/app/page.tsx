@@ -4,6 +4,7 @@ import Table from "@/components/table/index"
 import Video from "@/components/video/index"
 import Pricing from "@/components/pricing/index"
 import Al from "@/components/alvideo/index"
+import Chose from "@/components/choose/index"
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Video/>
       <Pricing/>
       <Al/>
+      <Chose/>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import React from 'react'
 const index = () => {
     return (
         <div className='bg-white mt-24 ' >
-            <div className=' py-16 w-[80%] m-auto flex max-lg:flex-col items-center justify-between gap-20 '>
+            <div className=' py-16 w-[70%] m-auto flex max-lg:flex-col items-center justify-between gap-20 '>
                 <div>
                     <img className='w-[500px]' src="alof.png" alt="" />
                 </div>
