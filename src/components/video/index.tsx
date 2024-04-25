@@ -1,17 +1,18 @@
 "use client"
-import { useState, ChangeEvent, FormEvent } from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
 
 const VideoUpload = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [responseMessage, setResponseMessage] = useState<string>('');
 
-  const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.files && event.target.files.length > 0) {
       setSelectedFile(event.target.files[0]);
     }
   };
 
-  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     if (!selectedFile) {
@@ -22,17 +23,19 @@ const VideoUpload = () => {
     formData.append('file', selectedFile);
 
     try {
-      const response = await fetch('https://aitest-qo53752v5a-nw.a.run.app/predict', {
-        method: 'POST',
-        body: formData
+      const response = await axios.post('https://aitest-qo53752v5a-nw.a.run.app/predict', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
       });
 
-      if (!response.ok) {
+      if (response.status === 200) {
+        console.log("video sent");
+        console.log(response.data.prediction);
+        setResponseMessage(response.data.prediction);
+      } else {
         throw new Error('Failed to upload video. Server returned ' + response.status);
       }
-
-      const data = await response.json();
-      setResponseMessage(data.message); // Assuming API returns a message
     } catch (error) {
       console.error('Error:', error);
       setResponseMessage('An error occurred while uploading the video.');
@@ -43,7 +46,7 @@ const VideoUpload = () => {
     <div className='text-white'>
       <h2>Video Upload</h2>
       <form onSubmit={handleSubmit}>
-        <input type="file"  onChange={handleFileChange} />
+        <input type="file" onChange={handleFileChange} />
         <button type="submit">Upload</button>
       </form>
       {responseMessage && (
