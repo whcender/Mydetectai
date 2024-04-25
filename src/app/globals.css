@@ -2,26 +2,29 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Roboto+Condensed:wght@400;500;700;900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Karantina:wght@300;400;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
-
-@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Karantina:wght@300;400;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
-
-
-
-@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Karantina:wght@300;400;700&family=Libre+Caslon+Display&family=Noto+Sans+Thai:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
-
-
-
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Karantina:wght@300;400;700&family=Libre+Caslon+Display&family=Noto+Sans+Thai:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .table1 {
-  background: rgb(2,167,255);
-  background: linear-gradient(90deg, rgba(2,167,255,1) 0%, rgba(0,69,106,1) 100%);
+  background: rgb(2, 167, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 167, 255, 1) 0%,
+    rgba(0, 69, 106, 1) 100%
+  );
+}
+.arkaplan {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 45%,
+    rgba(255, 255, 255, 1) 45%
+  );
 }
 @layer base {
   :root {
