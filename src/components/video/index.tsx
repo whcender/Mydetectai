@@ -19,13 +19,18 @@ const VideoUpload = () => {
     }
 
     const formData = new FormData();
-    formData.append('video', selectedFile);
+    formData.append('file', selectedFile);
 
     try {
-      const response = await fetch('https://aitest-qo53752v5a-nw.a.run.app/', {
+      const response = await fetch('https://aitest-qo53752v5a-nw.a.run.app/predict', {
         method: 'POST',
         body: formData
       });
+
+      if (!response.ok) {
+        throw new Error('Failed to upload video. Server returned ' + response.status);
+      }
+
       const data = await response.json();
       setResponseMessage(data.message); // Assuming API returns a message
     } catch (error) {
@@ -38,7 +43,7 @@ const VideoUpload = () => {
     <div className='text-white'>
       <h2>Video Upload</h2>
       <form onSubmit={handleSubmit}>
-        <input type="file" accept="video/*" onChange={handleFileChange} />
+        <input type="file"  onChange={handleFileChange} />
         <button type="submit">Upload</button>
       </form>
       {responseMessage && (

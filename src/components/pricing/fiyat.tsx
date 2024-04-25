@@ -4,7 +4,7 @@ import { BsArrowRight } from "react-icons/bs";
 
 const fiyat = () => {
   return (
-    <div className='text-black w[80%] flex justify-center items-center mt-24 gap-5' >
+    <div className='text-black w[80%] flex max-md:flex-col justify-center items-center mt-24 gap-5' >
       <div className=' w-max flex flex-col items-center gap-6 justify-center text-center px-3 py-10 rounded-2xl bg-white '>
         <div className='flex  flex-col gap-3'>
           <p className='font-darker mt-0 text-3xl font-bold opacity-70'>Personal</p>
