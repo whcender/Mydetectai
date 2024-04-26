@@ -2,7 +2,7 @@ import React from 'react'
 
 const index = () => {
     return (
-        <div className='w-[80%] max-md:w-[90%]  flex justify-between max-lg:flex-col items-center m-auto text-white'>
+        <div className='w-[80%] max-md:w-[70%] max-md:m-auto flex justify-between max-lg:flex-col items-center m-auto text-white'>
             <div className='flex flex-col gap-6 mt-16 mb-10'>
                 <img className='w-52 max-xl:w-40' src="ailogo.png" alt="" />
                 <p className='max-xl:text-xs'>Download the app by clicking the link below :</p>
