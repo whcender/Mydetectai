@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { auth } from '@/auth'
 import Navbar from "@/components/navbar";
-
+import Footer from "@/components/footer/index"
 import { SessionProvider } from 'next-auth/react'
 
 
@@ -22,7 +22,7 @@ export default async function RootLayout({
     <SessionProvider session={session}>
       <html lang="en">
         <body className="bg-black">   <Navbar /> <main>{children}</main>
-
+          <Footer />
         </body>
       </html>
     </SessionProvider>
