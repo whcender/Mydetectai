@@ -14,8 +14,8 @@ const index = () => {
                 <Avatar />
 
             </div>
-            <div className='w-[50%] max-lg:w-full relative flex items-center justify-center max-xl:h-[280px]  h-[250px] rounded-[50px] max-md:h-[240px] bg-white'>
-                <p className='font-roboto font-black text-black text-6xl max-xl:text-5xl max-2xl:text-5xl max-lg:text-6xl max-md:text-4xl'>HOW WE WORK?</p>
+            <div className='w-[50%] max-lg:w-full relative flex items-center justify-center max-xl:h-[280px]  h-[250px] rounded-[50px] max-md:h-[240px] bg-black'>
+                <p className='font-roboto font-black text-white text-6xl max-xl:text-5xl max-2xl:text-5xl max-lg:text-6xl max-md:text-4xl'>HOW WE WORK?</p>
                 <img className='absolute cursor-pointer size-16 max-xl:size-20 bottom-0 right-0' src="button.svg" alt="" />
             </div>
         </div>
