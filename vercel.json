@@ -3,8 +3,11 @@
       {
         "src": "/api/email",
         "methods": ["POST"],
-        "headers": "*"
+        "headers": {
+          "Access-Control-Allow-Origin": "*"
+        }
       }
+      
     ]
   }
   
