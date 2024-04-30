@@ -5,6 +5,7 @@ import { FiFileText } from "react-icons/fi";
 import { IoSettingsOutline } from "react-icons/io5";
 import { MdOutlineSupport } from "react-icons/md";;
 import { FaUserCheck } from "react-icons/fa";
+import { CgMenuRight } from "react-icons/cg";
 import { Button } from "@/components/ui/button"
 import Link from "next/link";
 import {
@@ -22,7 +23,7 @@ export default function SheetDemo() {
   return (
     <Sheet   >
       <SheetTrigger asChild>
-        <img className='size-8 max-md:size-5 cursor-pointer' src="navikinci.svg" alt="" />
+      <CgMenuRight className='size-10 text-white  max-md:size-5 cursor-pointer' />
 
       </SheetTrigger>
       <SheetContent>

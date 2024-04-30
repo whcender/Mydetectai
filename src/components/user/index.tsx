@@ -3,6 +3,7 @@ import Link from "next/link"
 import { FaUserCog } from "react-icons/fa";
 import { FaUserCheck } from "react-icons/fa";
 import { RxExit } from "react-icons/rx";
+import { FaRegUser } from "react-icons/fa";
 
 import {
     Popover,
@@ -20,7 +21,7 @@ export default function PopoverDemo() {
     return (
         <Popover>
             <PopoverTrigger asChild>
-                <img className='size-10 max-md:size-7 cursor-pointer' src="navinsan.svg" alt="" />
+            <FaRegUser className='size-8 text-white max-md:size-7 cursor-pointer' />
             </PopoverTrigger>
             <PopoverContent className="w-52 max-md:w-36 max-md:mr-14">
                 <div className="flex flex-col gap-4">
