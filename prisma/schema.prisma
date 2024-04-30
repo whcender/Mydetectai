@@ -55,6 +55,10 @@ model VerificationToken {
   @@unique([email, token])
 }
 
+model Email {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  emaill     String
+}
 model PasswordResetToken {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   email     String   
@@ -62,9 +66,4 @@ model PasswordResetToken {
   expires  DateTime
 
   @@unique([email, token])
-}
-
-model Email {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  email     String
 }

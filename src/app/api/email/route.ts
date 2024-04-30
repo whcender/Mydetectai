@@ -7,7 +7,7 @@ export const POST = async (req: NextRequest) => {
     try {
         const emailExists = await prisma.email.findFirst({
             where: {
-                email
+                emaill: email
             }
         })
         return new NextResponse(JSON.stringify({ message: "Email sent" }), { status: 200 });
