@@ -63,3 +63,8 @@ model PasswordResetToken {
 
   @@unique([email, token])
 }
+
+model Email {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  email     String
+}
