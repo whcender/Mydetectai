@@ -1,18 +1,30 @@
 import { prisma } from "@/utils/connect";
-import { NextRequest } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 export const POST = async (req: NextRequest) => {
-    const { email } =  await req.json()
+    const { email } = await req.json()
 
-    await prisma.email.create({
-        data: {
-            email
-        }
-    })
-};
+    try {
+        const emailExists = await prisma.email.findFirst({
+            where: {
+                email
+            }
+        })
+        return new NextResponse(JSON.stringify({ message: "Email sent" }), { status: 200 });
 
-export const GET = async (req: NextRequest) => {
-    const emails = await prisma.email.findMany()
+    }
+    catch (e) {
+        return new NextResponse(
+            JSON.stringify({ message: "Something went wrong!" }),
+            { status: 500 }
+        );
 
-    return emails
-};
+
+    };
+}
+
+    export const GET = async (req: NextRequest) => {
+        const emails = await prisma.email.findMany()
+
+        return new NextResponse(JSON.stringify(emails), { status: 200 });
+    };
